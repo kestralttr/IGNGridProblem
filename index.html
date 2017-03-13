@@ -3,28 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>GridProblem</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="title-section">
-      <h1>Grid Problem</h1>
+    <div id="main-section">
+      <div id="title-section">
+        <h1>Grid Problem</h1>
+      </div>
+      <div id="grid-section">
+        <div id="instructions-container">
+          <p id="instructions">Enter single digit values into the grid.  Then click the solve button to display the contiguous (diagonals included) who's sum equals the number of cells (9).</p>
+        </div>
+        <input class="number-entry" maxlength="1" type="text" name="" value="">
+        <input class="number-entry" maxlength="1" type="text" name="" value="">
+        <input class="number-entry" maxlength="1" type="text" name="" value=""><br>
+        <input class="number-entry" maxlength="1" type="text" name="" value="">
+        <input class="number-entry" maxlength="1" type="text" name="" value="">
+        <input class="number-entry" maxlength="1" type="text" name="" value=""><br>
+        <input class="number-entry" maxlength="1" type="text" name="" value="">
+        <input class="number-entry" maxlength="1" type="text" name="" value="">
+        <input class="number-entry" maxlength="1" type="text" name="" value=""><br>
+        <button id="button" onclick="gridIterator()">Solve!</button>
+      </div>
+      <div id="results-section">
+        <h2 id="solution-title">Solutions</h2>
+        <div id="results-area">
+        </div>
+      </div>
+      <script src="javascript.js" type="text/javascript">
+      </script>
     </div>
-    <div id="grid-section">
-      <input class="number-entry" type="text" name="" value="">
-      <input class="number-entry" type="text" name="" value="">
-      <input class="number-entry" type="text" name="" value=""><br>
-      <input class="number-entry" type="text" name="" value="">
-      <input class="number-entry" type="text" name="" value="">
-      <input class="number-entry" type="text" name="" value=""><br>
-      <input class="number-entry" type="text" name="" value="">
-      <input class="number-entry" type="text" name="" value="">
-      <input class="number-entry" type="text" name="" value=""><br>
-      <button id="button" onclick="gridIterator()">Solve!</button>
-    </div>
-    <div id="results-section">
-
-    </div>
-    <script src="javascript.js" type="text/javascript">
-    </script>
   </body>
 </html>

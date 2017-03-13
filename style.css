@@ -1,5 +1,22 @@
 body {
-  background-color: red;
+  font-family: 'Cabin', sans-serif;
+  background-color: rgb(0,88,188);
+  color: rgb(235,235,235);
+  background-image: url("http://wallpapercave.com/wp/d0g0acf.jpg");
+  background-size: cover;
+}
+
+#main-section {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 3px solid rgb(61,147,235);
+}
+
+h1 {
+  font-size: 45px;
 }
 
 #title-section {
@@ -21,7 +38,24 @@ body {
   margin-top: 5px;
 }
 
+#instructions-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#instructions {
+
+}
+
 #results-section {
   margin-top: 10px;
   text-align: center;
+}
+
+#solution-title {
+  text-decoration: underline;
+}
+
+.solutionP {
+  font-size: 25px;
 }

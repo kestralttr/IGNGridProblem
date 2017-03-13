@@ -182,16 +182,17 @@ let gridIterator = function() {
     });
     newP = document.createElement('p');
     newP.innerHTML = resultStr;
-    document.getElementById("results-section").appendChild(newP);
+    newP.classList.add("solutionP");
+    document.getElementById("results-area").appendChild(newP);
     // let newP = document.createElement('p');
     // newP.innerHTML = resultStr;
-    // document.getElementById("results-section").appendChild(newP);
+    // document.getElementById("results-area").appendChild(newP);
     // let brTag = document.createElement('br');
-    // document.getElementById("results-section").appendChild(brTag);
+    // document.getElementById("results-area").appendChild(brTag);
     resultStr = "";
   }
 
-  let results = document.getElementById("results-section");
+  let results = document.getElementById("results-area");
   results.innerHTML = "";
 
   solutions.forEach(function(el) {
