@@ -170,12 +170,14 @@ let gridIterator = function() {
   console.log(solutionIdxs);
 
   let resultStr = "";
-  
+
   function newSolution(arr) {
     arr.forEach(function(val) {
       resultStr = resultStr + val + " ";
     });
-    document.getElementById("results-section").appendChild(document.createElement('p').innerHTML = resultStr);
+    let newP = document.createElement('p');
+    newP.innerHTML = resultStr;
+    document.getElementById("results-section").appendChild(newP);
     // let newP = document.createElement('p');
     // newP.innerHTML = resultStr;
     // document.getElementById("results-section").appendChild(newP);
