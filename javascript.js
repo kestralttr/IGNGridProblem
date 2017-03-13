@@ -170,12 +170,17 @@ let gridIterator = function() {
   console.log(solutionIdxs);
 
   let resultStr = "";
+  let newP;
 
   function newSolution(arr) {
-    arr.forEach(function(val) {
-      resultStr = resultStr + val + " ";
+    arr.forEach(function(val,idx) {
+      if(idx == arr.length - 1) {
+        resultStr = resultStr + val;
+      } else {
+        resultStr = resultStr + val + ", ";
+      }
     });
-    let newP = document.createElement('p');
+    newP = document.createElement('p');
     newP.innerHTML = resultStr;
     document.getElementById("results-section").appendChild(newP);
     // let newP = document.createElement('p');
@@ -186,12 +191,13 @@ let gridIterator = function() {
     resultStr = "";
   }
 
+  let results = document.getElementById("results-section");
+  results.innerHTML = "";
+
   solutions.forEach(function(el) {
     new newSolution(el);
   });
 
-  let results = document.getElementById("results-section");
-  results.innerHTML = solutions;
 };
 
 // gridIterator(grid1);
