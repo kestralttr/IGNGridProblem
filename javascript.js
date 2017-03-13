@@ -171,6 +171,7 @@ let gridIterator = function() {
 
   let resultStr = "";
   let newP;
+  let spaceP;
 
   function newSolution(arr) {
     arr.forEach(function(val,idx) {
