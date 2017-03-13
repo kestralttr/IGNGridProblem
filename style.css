@@ -1,0 +1,27 @@
+body {
+  background-color: red;
+}
+
+#title-section {
+  text-align: center;
+}
+
+#grid-section {
+  text-align: center;
+}
+
+.number-entry {
+  font-size: 26px;
+  width: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#button {
+  margin-top: 5px;
+}
+
+#results-section {
+  margin-top: 10px;
+  text-align: center;
+}
