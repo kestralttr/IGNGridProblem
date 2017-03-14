@@ -1,4 +1,6 @@
 
+// This array serves as a directional compass that allows cells to search
+// surrounding cells by iterating through these values.
 const compass = [
   [-1,0],
   [-1,1],
@@ -10,7 +12,7 @@ const compass = [
   [-1,-1]
 ];
 
-// making an array equality checker
+// This function allows us to compare arrays for equality.
 let arrayEqualityDetector = function(arr1,arr2) {
   let isEqual = true;
   arr1.forEach(function(el,idx) {
@@ -23,15 +25,9 @@ let arrayEqualityDetector = function(arr1,arr2) {
   return isEqual;
 };
 
-let sampleLists =  [
-  [[1,2],[1,1]],
-  [[2,2],[2,1]]
-];
-
-let sampleNew = [
-  [1,1],[1,3]
-];
-
+// This function uses the arrayEqualityDetector to check any
+// newly found combination against the already found combinations,
+// irregardles of order of indices.
 let dupChecker = function(indexLists,newList) {
   let outerMatch = false;
   let innerMatch = false;
@@ -60,6 +56,8 @@ let dupChecker = function(indexLists,newList) {
   return false;
 };
 
+// This function checks to see if a given array includes the array
+// given as an argument.
 Array.prototype.doesInclude = function(arr) {
   let result = false;
   let foundMatch = true;
@@ -80,9 +78,10 @@ Array.prototype.doesInclude = function(arr) {
   return result;
 };
 
+// This function checks the input fields in index.html and pulls out the
+// values and transforms them into integers.
 let getGrid = function() {
   let inputArray = document.getElementsByClassName("number-entry");
-  console.log(inputArray);
   let arr0 = [];
   let arr1 = [];
   let arr2 = [];
@@ -99,6 +98,8 @@ let getGrid = function() {
   return [arr0,arr1,arr2];
 };
 
+// This function iterates through all the elements of the grid to find
+// the solutions.
 let gridIterator = function() {
   let solutionIdxs = [];
   let solutions = [];
@@ -112,6 +113,9 @@ let gridIterator = function() {
       currentVals.push(innerVal);
       currentIdxs.push([outerIdx,innerIdx]);
 
+      // This function uses the previously defined constant 'compass' to
+      // search contiguous items while appropriatly adding to and resetting
+      // the sum to find combinations that equal the needed number.
       let gridSolver = function(outerIdx,innerIdx) {
         compass.forEach(function(dir) {
 
@@ -166,13 +170,11 @@ let gridIterator = function() {
     });
   });
 
-  console.log(solutions);
-  console.log(solutionIdxs);
-
   let resultStr = "";
   let newP;
-  let spaceP;
 
+  // This function creates and appends a new paragraph element for each
+  // solution.
   function newSolution(arr) {
     arr.forEach(function(val,idx) {
       if(idx == arr.length - 1) {
@@ -185,11 +187,6 @@ let gridIterator = function() {
     newP.innerHTML = resultStr;
     newP.classList.add("solutionP");
     document.getElementById("results-area").appendChild(newP);
-    // let newP = document.createElement('p');
-    // newP.innerHTML = resultStr;
-    // document.getElementById("results-area").appendChild(newP);
-    // let brTag = document.createElement('br');
-    // document.getElementById("results-area").appendChild(brTag);
     resultStr = "";
   }
 
@@ -201,5 +198,3 @@ let gridIterator = function() {
   });
 
 };
-
-// gridIterator(grid1);
