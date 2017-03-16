@@ -4,6 +4,8 @@ The grid problem asks us to create a program that is able to take a grid and gen
 
 In our example, we are using a 3x3 grid, and our program will look for combinations of values that total 9, since a 3x3 grid holds 9 spaces.
 
+My finished build can be found [here](https://kestralttr.github.io/IGNGridProblem/), and I've included an explanation of all the functions defined and used within the code below.
+
 ## Approach
 
 As I first considered this problem, I knew that recursion would likely be the best way to let the computer handle most of the heavy lifting.  What I essentially needed to do was write a program that would iterate through the grid, and then at each iteration it would need to check all surrounding values to see what potential sums were generated.
