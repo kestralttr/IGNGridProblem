@@ -1,5 +1,7 @@
 # Grid Problem
 
+#### Please use Google Chrome to ensure the best user experience.
+
 The grid problem asks us to create a program that is able to take a grid and generate all the possible combinations of contiguous, unique values within that grid whose sum equals the number of total spaces in the grid.
 
 In our example, we are using a 3x3 grid, and our program will look for combinations of values that total 9, since a 3x3 grid holds 9 spaces.
